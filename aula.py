@@ -13,7 +13,7 @@ options = Options()
 
 options.headless = True # no need for ui
 
-browser = webdriver.Firefox(firefox_profile=firefox_profile)
+browser = webdriver.Firefox(options=options, firefox_profile=firefox_profile)
 
 browser.get('https://www.google.com/accounts/Login') # login page
 browser.find_element_by_id("identifierId").send_keys("email")
